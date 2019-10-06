@@ -27,8 +27,12 @@ load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependen
 #    register_default_tools: if True, the cmake and ninja toolchains, calling corresponding
 #      preinstalled binaries by name (cmake, ninja) will be registered after
 #      'native_tools_toolchains' without any platform constraints.
-#      The default is True.
-rules_foreign_cc_dependencies()
+#      The default is True
+
+rules_foreign_cc_dependencies([
+    "//:built_cmake_toolchain",
+    "//:built_ninja_toolchain_linux",
+])
 
 http_archive(
    name = "openblas",
