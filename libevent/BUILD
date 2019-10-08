@@ -23,4 +23,6 @@ configure_make(
       "//openssl",
     ],
     static_libraries = [ "libevent.a", ],
+        visibility = ["//visibility:public"],
+
 )
