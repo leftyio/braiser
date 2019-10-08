@@ -5,6 +5,7 @@ configure_make(
     name = "libevent",
     configure_options = [
         "--enable-shared=no",
+        "--enable-shared=yes",
         "--disable-libevent-regress",
         "--disable-samples",
     ],
@@ -18,4 +19,8 @@ configure_make(
     configure_env_vars = {
         "AR": "",
     },
+    deps = [
+      "//openssl",
+    ],
+    static_libraries = [ "libevent.a", ],
 )
