@@ -14,4 +14,8 @@ configure_make(
 
   lib_source = "@flex//:all",
    visibility = ["//visibility:public"],
+
+   deps = [
+       "//bison"
+   ],
 )
