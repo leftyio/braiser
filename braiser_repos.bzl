@@ -42,3 +42,19 @@ def include_braiser_repositories():
         sha256 = "c336099532b765a6815173f62df0ed897528a9d551837d627c1f87fadad90428",
         urls = ["https://www-us.apache.org/dist/thrift/0.12.0/thrift-0.12.0.tar.gz"],
     )
+
+    http_archive(
+        name = "bison",
+        build_file_content = all_content,
+        strip_prefix = "bison-3.3",
+        urls = ["http://ftp.gnu.org/gnu/bison/bison-3.3.tar.gz"],
+    )
+
+    # 2.6.4 is more current but fails with GCC-7
+    # https://github.com/westes/flex/issues/219
+    http_archive(
+        name = "flex",
+        build_file_content = all_content,
+        strip_prefix = "flex-2.6.3",
+        urls = ["https://github.com/westes/flex/releases/download/v2.6.3/flex-2.6.3.tar.gz"],
+    )

@@ -5,7 +5,7 @@ configure_make(
     name = "libevent",
     configure_options = [
         "--enable-shared=no",
-        "--enable-shared=yes",
+        "--enable-static=yes",
         "--disable-libevent-regress",
         "--disable-samples",
     ],

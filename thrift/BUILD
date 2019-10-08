@@ -56,5 +56,8 @@ install_prefix = "foo",
                 "WITH_STATIC_LIB": "on",
                 "WITH_STDTHREADS": "on",
     },
+    deps = [
+      "//bison", "//flex",
+    ],
 )
 
