@@ -11,9 +11,9 @@ configure_make(
         "--disable-libfl",
 
     ],
-configure_env_vars = [
+configure_env_vars = {
   "YACC": "$$EXT_BUILD_DEPS$$/bison/bin/yacc",
-],
+},
   lib_source = "@flex//:all",
    visibility = ["//visibility:public"],
 
