@@ -55,9 +55,12 @@ install_prefix = "foo",
                 "WITH_SHARED_LIB": "no",
                 "WITH_STATIC_LIB": "on",
                 "WITH_STDTHREADS": "on",
+
+                "BISON_EXECUTABLE" : "$$EXT_BUILD_DEPS$$/bison/bin/bison"
     },
     deps = [
       "//bison", "//flex",
     ],
+
 )
 
