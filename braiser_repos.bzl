@@ -46,8 +46,8 @@ def include_braiser_repositories():
     http_archive(
         name = "bison",
         build_file_content = all_content,
-        strip_prefix = "bison-3.3",
-        urls = ["http://ftp.gnu.org/gnu/bison/bison-3.3.tar.gz"],
+        strip_prefix = "bison-3.0.4",
+        urls = ["http://ftp.gnu.org/gnu/bison/bison-3.0.4.tar.gz"],
     )
 
     # 2.6.4 is more current but fails with GCC-7
