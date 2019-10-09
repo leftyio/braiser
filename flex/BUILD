@@ -12,7 +12,7 @@ configure_make(
 
     ],
 configure_env_vars = {
-  "YACC": "$$EXT_BUILD_DEPS$$/bison/bin/yacc",
+  "YACC": "$$EXT_BUILD_DEPS$$/bison/bin/bison -y",
 },
   lib_source = "@flex//:all",
    visibility = ["//visibility:public"],
