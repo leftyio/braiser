@@ -56,10 +56,12 @@ install_prefix = "foo",
                 "WITH_STATIC_LIB": "on",
                 "WITH_STDTHREADS": "on",
 
-                "BISON_EXECUTABLE" : "$$EXT_BUILD_DEPS$$/bison/bin/bison"
+                "BISON_EXECUTABLE" : "$$EXT_BUILD_DEPS$$/bison/bin/bison",
+                "FLEX_EXECUTABLE" : "$$EXT_BUILD_DEPS$$/flex/bin/flex",
+
     },
     deps = [
-      "//bison", "//flex",
+      "//bison", "//flex", "//libevent", "//boost", "openssl",
     ],
 
 )
