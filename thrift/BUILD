@@ -61,7 +61,7 @@ install_prefix = "foo",
 
     },
     deps = [
-      "//bison", "//flex", "//libevent", "//boost", "openssl",
+      "//bison", "//flex", "//libevent", "//boost:boost_filesystem", "openssl",
     ],
 
 )
