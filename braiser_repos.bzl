@@ -58,3 +58,17 @@ def include_braiser_repositories():
         strip_prefix = "flex-2.6.3",
         urls = ["https://github.com/westes/flex/releases/download/v2.6.3/flex-2.6.3.tar.gz"],
     )
+
+    http_archive(
+        name = "libuv",
+        build_file_content = all_content,
+        strip_prefix = "libuv-1.34.0",
+        urls = ["https://github.com/libuv/libuv/archive/v1.34.0.tar.gz"],
+    )
+
+    http_archive(
+        name = "cassandra-cpp-driver",
+        build_file_content = all_content,
+        strip_prefix = "cpp-driver-2.14.1",
+        urls = ["https://github.com/datastax/cpp-driver/archive/2.14.1.tar.gz"],
+    )
