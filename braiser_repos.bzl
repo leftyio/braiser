@@ -32,15 +32,7 @@ def include_braiser_repositories():
         build_file_content = all_content,
         strip_prefix = "boost_1_68_0",
         sha256 = "da3411ea45622579d419bfda66f45cd0f8c32a181d84adfa936f5688388995cf",
-        urls = ["https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.gz"],
-    )
-
-    http_archive(
-        name = "thrift",
-        build_file_content = all_content,
-        strip_prefix = "thrift-0.12.0",
-        sha256 = "c336099532b765a6815173f62df0ed897528a9d551837d627c1f87fadad90428",
-        urls = ["https://www-us.apache.org/dist/thrift/0.12.0/thrift-0.12.0.tar.gz"],
+        urls = ["https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_6/dist/thrift/0.12.0/thrift-0.12.0.tar.gz"],
     )
 
     http_archive(
@@ -71,4 +63,18 @@ def include_braiser_repositories():
         build_file_content = all_content,
         strip_prefix = "cpp-driver-2.14.1",
         urls = ["https://github.com/datastax/cpp-driver/archive/2.14.1.tar.gz"],
+    )
+
+    http_archive(
+        name = "crc32c",
+        build_file_content = all_content,
+        strip_prefix = "crc32c-1.1.1",
+        urls = ["https://github.com/google/crc32c/archive/1.1.1.tar.gz"],
+    )
+
+    http_archive(
+        name = "googleapis-cpp",
+        build_file_content = all_content,
+        strip_prefix = "cpp-cmakefiles-0.2.1",
+        urls = [ "https://github.com/googleapis/cpp-cmakefiles/archive/v0.2.1.tar.gz" ],
     )
